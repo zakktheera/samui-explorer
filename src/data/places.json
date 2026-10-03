@@ -1,0 +1,85 @@
+[
+  {
+    "category": "Restaurant",
+    "id": 1,
+    "name": "Luk Khai Lek Cafe and Restaurant",
+    "area": "Maenam",
+    "description": "A hideaway cafe in Maenam area with an atmosphere surrounding by nature river and an iconic red  bridge, serves Thai food and staff are very friendly.",
+    "price": "฿100 - ฿400 per dish",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Luk+Khai+Lek+Cafe+and+Restaurant",
+    "imageUrl": "/places-images/luk-khai-lek-1.png",
+    "images": [
+      "/places-images/luk-khai-lek-1.png",
+      "/places-images/luk-khai-lek-2.png",
+      "/places-images/luk-khai-lek-3.png",
+      "/places-images/luk-khai-lek-4.png",
+      "/places-images/luk-khai-lek-5.png",
+      "/places-images/luk-khai-lek-6.png",
+      "/places-images/luk-khai-lek-7.png",
+      "/places-images/luk-khai-lek-8.png",
+      "/places-images/luk-khai-lek-9.png",
+      "/places-images/luk-khai-lek-10.png",
+      "/places-images/luk-khai-lek-11.png",
+      "/places-images/luk-khai-lek-12.png",
+      "/places-images/luk-khai-lek-13.png",
+      "/places-images/luk-khai-lek-14.png",
+      "/places-images/luk-khai-lek-15.png",
+      "/places-images/luk-khai-lek-16.png"
+     ],
+    "contact": "WhatsApp +66123456789"
+  },
+  {
+    "category": "Wellness",
+    "id": 2,
+    "name": "V Grace Beauty Salon",
+    "area": "Bophut",
+    "description": "A professional salon open since 2017 and well known for color expertise and wash and blowdry experiences",
+    "price": "฿450 - ฿8000 per session",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=V+Grace+Beauty+Salon",
+    "imageUrl": "/places-images/v-grace-1.png",
+    "images": [
+      "/places-images/v-grace-1.png",
+      "/places-images/v-grace-2.png",
+      "/places-images/v-grace-3.png",
+      "/places-images/v-grace-4.png",
+      "/places-images/v-grace-5.png",
+      "/places-images/v-grace-6.png",
+      "/places-images/v-grace-7.png",
+      "/places-images/v-grace-8.png",
+      "/places-images/v-grace-9.png"
+    ],
+
+    "contact": "WhatsApp +66123456789"
+  },
+  {
+    "category": "Activity",
+    "id": 3,
+    "name": "Angthong Marine Park Day Trip",
+    "area": "Samui Nearby",
+    "description": "Visit these marine park islands of Gulp of Thailand and enjoy a sunny day out with friends and family on a beautiful white sand beaches.",
+    "price": "฿1600 - ฿2500 per person",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Angthong+Marine+Park+Day+Trip",
+    "imageUrl": "/places-images/angthong-day-trip-1.png",
+    "images": [
+      "/places-images/angthong-day-trip-1.png",
+      "/places-images/angthong-day-trip-2.png",
+      "/places-images/angthong-day-trip-3.png",
+      "/places-images/angthong-day-trip-4.png",
+      "/places-images/angthong-day-trip-5.png",
+      "/places-images/angthong-day-trip-6.png",
+      "/places-images/angthong-day-trip-7.png",
+      "/places-images/angthong-day-trip-8.png",
+      "/places-images/angthong-day-trip-9.png",
+      "/places-images/angthong-day-trip-10.png",
+      "/places-images/angthong-day-trip-11.png",
+      "/places-images/angthong-day-trip-12.png",
+      "/places-images/angthong-day-trip-13.png",
+      "/places-images/angthong-day-trip-14.png",
+      "/places-images/angthong-day-trip-15.png",
+      "/places-images/angthong-day-trip-16.png",
+      "/places-images/angthong-day-trip-17.png"
+    ],
+    
+    "contact": "WhatsApp +66123456789"
+  }
+]
