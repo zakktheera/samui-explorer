@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router"
 import places from "../data/places.json"
 import { useState } from "react"
+import { assetUrl } from "../utils/assetUrl"
 
 export const PlaceDetails = () => {
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -27,7 +28,7 @@ export const PlaceDetails = () => {
                     Back to places
                 </Link>
 
-                <img src={place.images[selectedImageIndex]} alt={place.name} className="mt-6 aspect-video w-full rounded-lg object-cover" />
+                <img src={assetUrl(place.images[selectedImageIndex])} alt={place.name} className="mt-6 aspect-video w-full rounded-lg object-cover" />
                 <div
                     className="mt-3 flex gap-3 overflow-x-auto pb-2"
                     aria-label= "Place image gallery"
@@ -44,7 +45,7 @@ export const PlaceDetails = () => {
                                 }`}
                         >
                             <img
-                                src={image}
+                                src={assetUrl(image)}
                                 alt=""
                                 className="h-20 w-28 object-cover"
                             

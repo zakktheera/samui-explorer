@@ -1,6 +1,7 @@
 import { Header } from "./components/Header";
 import { PlaceCard } from "./components/PlaceCard";
 import places from "./data/places.json";
+import { assetUrl } from "./utils/assetUrl";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -230,7 +231,7 @@ function App() {
                   price={place.price}
                   contact={place.contact}
                   mapsUrl={place.mapsUrl}
-                  imageUrl={place.imageUrl}
+                  imageUrl={assetUrl(place.imageUrl)}
                   isSaved={savedPlaceIds.includes(place.id)}
                   onToggleSaved={() => toggleSavedPlace(place.id)}
                 />
