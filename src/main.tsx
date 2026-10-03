@@ -7,7 +7,7 @@ import {PlaceDetails} from "./pages/PlaceDetails"
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/samui-explorer">
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/places/:placeId" element={<PlaceDetails/>}/>
