@@ -44,3 +44,8 @@ jobs:
           timeout: 300000
           local-dir: ./dist/
           server-dir: /public_html/samui-explorer/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            places-images/**
