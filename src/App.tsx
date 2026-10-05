@@ -3,31 +3,21 @@ import { PlaceCard } from "./components/PlaceCard";
 import places from "./data/places.json";
 import { assetUrl } from "./utils/assetUrl";
 import { useEffect, useState } from "react";
+import { usePlaces } from "./context/PlacesContext";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedArea, setSelectedArea] = useState("All");
-  const [savedPlaceIds, setSavedPlaceIds] = useState<number[]>(() => {
-    const storedIds = localStorage.getItem("savedPlaceIds")
-    return storedIds?JSON.parse(storedIds):[]
-  });
-  useEffect(() => {
-    localStorage.setItem(
-      "savedPlaceIds",
-      JSON.stringify(savedPlaceIds)
-    )
-  }, [savedPlaceIds]);
-  const [placeNotes, setPlaceNotes] = useState<Record<number, string>>(() => {
-    const storedNotes = localStorage.getItem("placeNotes")
-    return storedNotes?JSON.parse(storedNotes):{}
-  });
-  useEffect(() => {
-    localStorage.setItem(
-      "placeNotes",
-      JSON.stringify(placeNotes)
-    )
-  },[placeNotes])
+  const {
+  savedPlaceIds,
+  placeNotes,
+  toggleSavedPlace,
+  updatePlaceNote,
+} = usePlaces();
+
+
+
   const [temperature, setTemperature] = useState<number | null>(null);
   const [isWeatherLoading, setIsWeatherLoading] = useState(true);
   const [weatherError, setWeatherError] = useState("");
@@ -71,21 +61,7 @@ function App() {
 
     return matchedSearch && matchedCategory && matchedArea;
   });
-  const toggleSavedPlace = (placeId: number) => {
-    setSavedPlaceIds((currentIds) => {
-      if (currentIds.includes(placeId)) {
-        return currentIds.filter((id) => id !== placeId);
-      }
 
-      return [...currentIds, placeId];
-    });
-  };
-  const updatePlaceNote = (placeId: number, note: string) => {
-    setPlaceNotes((currentNotes) => ({
-      ...currentNotes,
-      [placeId]: note,
-    }));
-  };
 
   return (
     <div className="min-h-screen bg-zinc-50 px-4 py-6 text-zinc-900 sm:px-6 lg:px-8">

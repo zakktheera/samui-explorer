@@ -2,10 +2,17 @@ import { Link, useParams } from "react-router"
 import places from "../data/places.json"
 import { useState } from "react"
 import { assetUrl } from "../utils/assetUrl"
+import { usePlaces } from "../context/PlacesContext";
 
 export const PlaceDetails = () => {
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
     const { placeId } = useParams()
+    const {
+  savedPlaceIds,
+  placeNotes,
+  toggleSavedPlace,
+  updatePlaceNote,
+} = usePlaces();
     const place = places.find(
         (place)=>place.id === Number(placeId)
     )
@@ -18,6 +25,9 @@ export const PlaceDetails = () => {
             </main>
         )
     }
+
+    const isSaved = savedPlaceIds.includes(place.id);
+
     return (
         <main className="min-h-screen bg-zinc-50 px-4 py-8 sm:px-6">
             <article className="mx-auto max-w-4xl">
@@ -77,7 +87,39 @@ export const PlaceDetails = () => {
                         </dd>
                     </div>
                 </dl>
+                <div className="mt-6 space-y-4">
+  <button
+    type="button"
+    onClick={() => toggleSavedPlace(place.id)}
+    className={`rounded-md px-4 py-3 font-semibold ${
+      isSaved
+        ? "bg-zinc-200 text-zinc-800 hover:bg-zinc-300"
+        : "bg-emerald-700 text-white hover:bg-emerald-800"
+    }`}
+  >
+    {isSaved ? "Remove from saved" : "Save place"}
+  </button>
 
+  <div>
+    <label
+      htmlFor={`note-${place.id}`}
+      className="block text-sm font-semibold text-zinc-700"
+    >
+      Your note
+    </label>
+
+    <textarea
+      id={`note-${place.id}`}
+      value={placeNotes[place.id] ?? ""}
+      onChange={(event) =>
+        updatePlaceNote(place.id, event.currentTarget.value)
+      }
+      rows={4}
+      className="mt-2 w-full rounded-md border border-zinc-300 bg-white p-3 text-zinc-900"
+      placeholder="Add a personal note"
+    />
+  </div>
+</div>
                 <a
                     href={place.mapsUrl}
                     target="_blank"
